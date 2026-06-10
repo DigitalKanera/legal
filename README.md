@@ -2,13 +2,17 @@
 
 Static privacy and support pages for all apps. Free hosting via **GitHub Pages**.
 
-## Recommended: dedicated repo
+## Publish (one-time setup)
 
-1. Create a new GitHub repo: **`DigitalKanera/legal`** (name can be anything; `legal` keeps URLs short).
-2. Copy the **contents** of this folder (`index.html`, `assets/`, `tipforge/`, `.nojekyll`) to the **root** of that repo.
-3. Push to `main`.
-4. GitHub → **Settings → Pages** → Build from **main** branch, folder **`/ (root)`**.
-5. Wait ~1 minute. Your site is live at:
+The site is pushed to **[github.com/DigitalKanera/legal](https://github.com/DigitalKanera/legal)**.
+
+### Enable GitHub Pages (required once)
+
+1. Open **[github.com/DigitalKanera/legal/settings/pages](https://github.com/DigitalKanera/legal/settings/pages)**
+2. Under **Build and deployment → Source**, choose **Deploy from a branch**
+3. Branch: **`main`**, folder: **`/ (root)`**
+4. Click **Save**
+5. Wait 1–2 minutes. Site URL:
 
    ```
    https://digitalkanera.github.io/legal/
@@ -20,8 +24,6 @@ Static privacy and support pages for all apps. Free hosting via **GitHub Pages**
 |-------|-----|
 | **Privacy Policy** | `https://digitalkanera.github.io/legal/tipforge/privacy.html` |
 | **Support URL** | `https://digitalkanera.github.io/legal/tipforge/support.html` |
-
-Replace `digitalkanera` with your GitHub username if different.
 
 ## Custom domain (optional)
 
@@ -54,6 +56,15 @@ python3 -m http.server 8080
 
 Note: root-absolute paths (`/assets/style.css`) need the server rooted at `legal/`.
 
-## Why this folder lives in TipForge
+## Sync changes from TipForge
 
-Source of truth stays with the app repo for agents and developers. Deploy by copying to the **`DigitalKanera/legal`** publishing repo (or symlink/subtree if you prefer automation later).
+After editing files in `TipForge/legal/`, publish to the live repo:
+
+```bash
+cd legal
+git add .
+git commit -m "Update legal pages"
+git push origin main
+```
+
+The `legal/` folder contains its own git remote pointing at `DigitalKanera/legal`.
