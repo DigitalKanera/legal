@@ -44,7 +44,7 @@ Cloudflare DNS (free) or your registrar’s DNS works fine.
 
 ## Edit contact email
 
-Search/replace `support@kanerachad.com` in HTML files with your real support address.
+Search/replace `support@digitalkanera.com` in HTML files with your real support address.
 
 ## Local preview
 
