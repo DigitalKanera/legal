@@ -11,22 +11,21 @@
   <header>
     <p class="nav"><a href="../index.html">Kanera Apps</a> / Chorebox</p>
     <h1>Chorebox Privacy Policy</h1>
-    <p class="meta">Last updated: July 30, 2026</p>
+    <p class="meta">Last updated: August 23, 2026</p>
   </header>
 
   <main>
     <article class="card">
       <p>
         Chorebox (“the app”) is published by Chad Kanera (“we,” “us”). This policy describes
-        how the app handles information. Chorebox is designed to work entirely on your device,
-        with no account, no login, and no cloud sync.
+        how the app handles information. Chorebox is local-first: it works on your device with no Chorebox account and no servers we operate. Optional family sharing uses Apple iCloud (CloudKit) only if you turn it on.
       </p>
 
       <h2>Summary</h2>
       <ul>
         <li>We do <strong>not</strong> operate user accounts or a server. There is nowhere for your family's data to be sent.</li>
         <li>We do <strong>not</strong> sell personal data, and the app contains no advertising or third-party analytics SDKs.</li>
-        <li>All kid profiles, chores, rewards, and history stay on your device.</li>
+        <li>Kid profiles, chores, rewards, and history stay on your device by default. If you enable family sharing, Apple iCloud syncs that data to the family devices you invite — we still do not run a Chorebox server.</li>
       </ul>
 
       <h2>Information stored on your device</h2>
@@ -49,10 +48,20 @@
       <p>
         Choosing a kid's avatar photo uses Apple's built-in photo picker, which does not grant
         the app access to your full photo library — only the specific photo you select. That
-        photo is cropped and compressed on-device and stored locally; it is never sent off your
-        device.
+        photo is cropped and compressed on-device and stored locally. We do not upload it to our own servers. If you later enable family sharing, that avatar may sync through Apple iCloud to invited family devices.
       </p>
 
+
+      <h2>Optional iCloud family sharing</h2>
+      <p>
+        Chorebox can optionally sync family data using Apple CloudKit
+        (container <code>iCloud.com.shiftcrew.chorebox</code>). This is off unless you enable
+        iCloud sync / family sharing in Settings. We do not operate the cloud: Apple does.
+        When it is on, kid profiles, chores, rewards, completions, and avatars may be stored
+        in your (or the family organizer's) iCloud account and shared with invited family
+        members' devices. You can turn it off; iCloud copies then follow Apple's iCloud
+        retention and deletion rules, not a Chorebox dashboard.
+      </p>
       <h2>Notifications</h2>
       <p>
         The optional daily reminder is a local notification scheduled on your device using
@@ -80,10 +89,12 @@
       <p>
         Chorebox is a tool for parents to manage chores for their own children, operated by the
         parent on the parent's own device. Kid profile information (a first name, an optional
-        photo, and chore/points data) is entered by the parent, stays on the parent's device, and
-        is never collected, transmitted, or seen by us — Chorebox has no server to send it to. We
-        do not knowingly collect personal information directly from children, and the app is not
-        directed at children operating it independently of a parent.
+        photo, and chore/points data) is entered by the parent. We do not collect it on our
+        servers. If family sharing is enabled, that information is transmitted through Apple
+        iCloud to invited family devices. We do not knowingly collect personal information
+        directly from children, and the app is not directed at children operating it independently
+        of a parent. Chorebox should be submitted as a parent-operated productivity app, not the
+        Kids Category.
       </p>
 
       <h2>Sharing and disclosure</h2>
@@ -96,15 +107,15 @@
       <h2>Data retention and deletion</h2>
       <p>
         Data remains on your device until you delete individual kids, chores, or rewards within
-        the app, or uninstall the app entirely. Uninstalling removes all Chorebox data from that
-        device. Since there is no cloud backup, deleted or uninstalled data cannot be recovered by us.
+        the app, or uninstall the app entirely. Uninstalling removes Chorebox data from that
+        device. If family sharing was enabled, copies in Apple iCloud remain until you (or the family organizer) delete them via iCloud / family sharing controls. We cannot recover data for you.
       </p>
 
       <h2>Security</h2>
       <p>
         Data is protected by your device's operating system and, where applicable, your device
         passcode/biometrics. Chorebox uses standard Apple APIs (SwiftData) and does not implement
-        a separate cloud backup of your data in v1.0.
+        a separate Chorebox-operated backup. Optional family sharing uses Apple CloudKit.
       </p>
 
       <h2>Changes</h2>
