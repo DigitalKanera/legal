@@ -3,48 +3,54 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nightly Minutes Privacy Policy</title>
-  <meta name="description" content="Privacy policy for Nightly Minutes: parent-operated K–5 reading log">
+  <title>Reading Log: Nightly Minutes Privacy Policy</title>
+  <meta name="description" content="Privacy policy for Reading Log: Nightly Minutes">
   <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
   <header>
     <p class="nav"><a href="../index.html">Kanera Apps</a> / Nightly Minutes</p>
-    <h1>Nightly Minutes Privacy Policy</h1>
+    <h1>Reading Log: Nightly Minutes Privacy Policy</h1>
     <p class="meta">Last updated: August 28, 2026</p>
   </header>
 
   <main>
     <article class="card">
       <p>
-        Nightly Minutes (“the app”) is published by Chad Kanera (“we,” “us”). This policy describes
-        how the app handles information. Nightly Minutes is a parent-operated K–5 reading log, not Kids Category.
-        It is local-only v1 (SwiftData on device): it works on your device with no account, no Chorebox PIN, and no iCloud.
+        Reading Log: Nightly Minutes (“the app,” “Nightly Minutes”) is published by Chad Kanera
+        (“we,” “us”). This policy describes how the app handles information. Nightly Minutes is
+        a parent-operated K–5 reading log. It is local-first: it works on your device with no
+        account, no iCloud, and no servers we operate.
       </p>
 
       <h2>Summary</h2>
       <ul>
-        <li>We do <strong>not</strong> operate user accounts or a server. There is no Nightly Minutes account.</li>
-        <li>We do <strong>not</strong> sell personal data, and the app contains no ads/analytics SDK.</li>
-        <li>Kid first names/avatars/entries stay on device. Local-only v1 uses SwiftData on device. There is no iCloud sync and no Chorebox PIN.</li>
+        <li>We do <strong>not</strong> operate user accounts or a server. There is nowhere for your family's reading log to be sent.</li>
+        <li>We do <strong>not</strong> sell personal data, and the app contains no advertising or third-party analytics SDKs.</li>
+        <li>Kid profiles and reading entries stay on your device. We do not use iCloud or any cloud sync in this version.</li>
       </ul>
 
       <h2>Information stored on your device</h2>
       <p>The app stores the following locally to provide its features:</p>
       <ul>
-        <li><strong>Kid profiles</strong> — first names and avatars entered by the parent.</li>
-        <li><strong>Reading entries</strong> — book titles, minutes or pages, dates, optional notes, and weekly summaries generated on device.</li>
-        <li><strong>Settings</strong> — trial/unlock state, reminder time, and reading-unit preferences.</li>
+        <li><strong>Kid profiles</strong> — a name, an avatar symbol and color, a preferred unit (minutes or pages), and an optional nightly goal.</li>
+        <li><strong>Reading entries</strong> — book title, minutes or pages, date, and an optional note entered by the parent.</li>
+        <li><strong>Settings</strong> — trial/unlock state, daily reminder time, selected kid, and appearance preference.</li>
       </ul>
       <p>
-        This data is stored with SwiftData on your device (local-only v1). Kid first names/avatars/entries stay on device.
-        We do not transmit any of this data to our own servers, because we don't operate any. There is no iCloud and no account.
+        Kid profiles, entries, and trial/unlock state live in Apple's shared App Group container
+        (<code>group.com.shiftcrew.readinglog</code>) so the iPhone/iPad app and the Home Screen widget
+        can read the same information. Selected-kid and appearance preferences use Apple's
+        UserDefaults on the device. The app also uses standard file-timestamp APIs as part of
+        local storage (declared in the app's privacy manifest). None of this is sent to us.
       </p>
+      <p>We do not transmit any of this data to our own servers, because we don't operate any.</p>
 
-      <h2>No Chorebox PIN, no iCloud, no account</h2>
+      <h2>No iCloud, no account</h2>
       <p>
-        Nightly Minutes has no account, no Chorebox PIN, and no iCloud. Parental controls from Chorebox
-        (including a PIN) are not part of this app. Optional family sharing / CloudKit is not offered in v1.
+        Nightly Minutes does not create an account and does not use Apple iCloud or CloudKit.
+        Uninstalling the app removes its local data from that device. We cannot recover a
+        reading log for you.
       </p>
 
       <h2>Notifications</h2>
@@ -56,8 +62,9 @@
 
       <h2>Purchases</h2>
       <p>
-        Nightly Minutes offers a 14-day trial then $3.99 non-consumable via Apple, processed entirely
-        through StoreKit. We do not receive your payment card details. Apple may collect information according to
+        Nightly Minutes is free to try for 14 days. After that, a one-time in-app purchase
+        (lifetime unlock, $3.99 USD) is processed entirely by Apple through StoreKit.
+        We do not receive your payment card details. Apple may collect information according to
         <a href="https://www.apple.com/legal/privacy/" rel="noopener noreferrer">Apple's Privacy Policy</a>.
         The app stores a local flag when a purchase is verified so the unlock remains available offline.
       </p>
@@ -66,42 +73,43 @@
       <ul>
         <li>Your name, email, or contact information (unless you email us for support).</li>
         <li>Precise location.</li>
-        <li>Contacts, microphone input, or your full photo library.</li>
+        <li>Contacts, photos, microphone input, or your photo library.</li>
         <li>Advertising identifiers for cross-app tracking.</li>
-        <li>No ads/analytics SDK.</li>
       </ul>
 
       <h2>Children's privacy</h2>
       <p>
-        Nightly Minutes is a parent-operated K–5 reading log, not Kids Category. It is operated by the
-        parent on the parent's own device. Kid first names/avatars/entries stay on device; they are entered by the parent.
-        We do not collect them on our servers. We do not knowingly collect personal information
+        Nightly Minutes is a tool for parents to log K–5 reading homework for their own children,
+        operated by the parent on the parent's own device. Kid profile information (a first name
+        and reading minutes or pages) is entered by the parent. We do not collect it on our
+        servers and do not use iCloud. We do not knowingly collect personal information
         directly from children, and the app is not directed at children operating it independently
-        of a parent. Submit and list this app as a parent-operated utility, not the Kids Category.
+        of a parent. Nightly Minutes should be submitted as a parent-operated education utility,
+        not the Kids Category.
       </p>
 
       <h2>Sharing and disclosure</h2>
       <p>
-        We do not share kid first names, avatars, or reading entries with third parties. We may disclose
+        We do not share kid profiles, reading entries, or history with third parties. We may disclose
         information if required by law or to protect our rights — though since we don't collect
         or store your data ourselves, there is nothing on our end to disclose.
       </p>
       <p>
-        When you use the weekly share, you choose what to send using the on-device share sheet.
+        When you use the weekly summary share sheet, you choose what to send and to which app.
       </p>
 
       <h2>Data retention and deletion</h2>
       <p>
         Data remains on your device until you delete individual kids or entries within
         the app, or uninstall the app entirely. Uninstalling removes Nightly Minutes data from that
-        device. We cannot recover data for you. There is no iCloud copy in v1.
+        device. We cannot recover data for you.
       </p>
 
       <h2>Security</h2>
       <p>
         Data is protected by your device's operating system and, where applicable, your device
-        passcode/biometrics. Nightly Minutes uses standard Apple APIs (SwiftData on device) and does not implement
-        a cloud backup. Local-only v1. No iCloud.
+        passcode/biometrics. Nightly Minutes uses standard Apple APIs (SwiftData, UserDefaults,
+        App Groups) and does not implement a separate Nightly Minutes-operated backup or cloud.
       </p>
 
       <h2>Changes</h2>

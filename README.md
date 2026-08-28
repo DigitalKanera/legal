@@ -18,6 +18,13 @@ The site is pushed to **[github.com/DigitalKanera/legal](https://github.com/Digi
    https://digitalkanera.github.io/legal/
    ```
 
+### App Store Connect URLs (Nightly Minutes)
+
+| Field | URL |
+|-------|-----|
+| **Privacy Policy** | `https://www.digitalkanera.com/nightlyminutes/privacy.html` |
+| **Support URL** | `https://www.digitalkanera.com/nightlyminutes/support.html` |
+
 ### App Store Connect URLs (TipForge)
 
 | Field | URL |
