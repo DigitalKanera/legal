@@ -421,7 +421,7 @@ button:hover,
 	.banner.style1.hero.orient-right {
 		display: grid;
 		grid-template-columns: 1fr;
-		grid-template-rows: minmax(22rem, 56vh);
+		grid-template-rows: minmax(21rem, min(52vh, 100vw));
 		align-items: stretch;
 		justify-content: stretch;
 		min-height: 0;
