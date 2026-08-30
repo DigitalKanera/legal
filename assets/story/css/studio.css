@@ -130,8 +130,9 @@ footer.wrapper {
 }
 
 /*
-	Imagine title-card hero: centered lockup over smoked control-room glass.
+	Dark smoked-glass rack hero: centered lockup over an ink/navy hall.
 	Desktop and mobile share one overlay; only the viewport height changes.
+	No global fog. Type sits on a thin ink scrim; racks stay visible.
 */
 .banner.style1.hero.title-card,
 .banner.style1.hero.title-card.orient-left,
@@ -144,8 +145,8 @@ footer.wrapper {
 	min-height: 88vh;
 	text-align: center;
 	overflow: hidden;
-	background-color: #ece8f2;
-	color: #fff;
+	background-color: var(--ink);
+	color: var(--ice);
 }
 
 .banner.style1.hero.title-card.fullscreen {
@@ -174,20 +175,22 @@ footer.wrapper {
 	height: 100%;
 	object-fit: cover;
 	object-position: center;
-	background: #ece8f2;
-	filter: saturate(0.92) brightness(1.04);
+	background: var(--ink);
+	filter: saturate(1.06) brightness(0.96);
 }
 
-/* Milky glass between the photo and the type. */
-.banner.style1.hero.title-card .image::before {
+/* Side-weighted rack-light pulse. Center aisle stays dark for type. */
+.banner.style1.hero.title-card .image::after {
 	content: "";
 	position: absolute;
 	inset: 0;
 	z-index: 2;
 	pointer-events: none;
 	background:
-		linear-gradient(180deg, rgba(248, 244, 252, 0.22) 0%, rgba(236, 230, 244, 0.12) 42%, rgba(248, 244, 252, 0.28) 100%),
-		radial-gradient(ellipse 55% 42% at 50% 46%, rgba(255, 255, 255, 0.18) 0%, transparent 72%);
+		linear-gradient(90deg, rgba(74, 232, 240, 0.08) 0%, transparent 20%, transparent 80%, rgba(212, 160, 90, 0.06) 100%),
+		linear-gradient(90deg, rgba(90, 180, 110, 0.04) 0%, transparent 16%, transparent 84%, rgba(74, 232, 240, 0.05) 100%);
+	mix-blend-mode: screen;
+	animation: rack-light-pulse 8.5s ease-in-out infinite;
 }
 
 .banner.style1.hero.title-card .hero-fiber {
@@ -208,56 +211,58 @@ footer.wrapper {
 }
 
 .banner.style1.hero.title-card .hero-fiber .r1 {
-	stroke: rgba(92, 196, 184, 0.42);
-	stroke-width: 18;
-	animation: hero-ribbon-hue 18s ease-in-out infinite;
+	stroke: rgba(74, 232, 240, 0.28);
+	stroke-width: 11;
+	animation: hero-fiber-breathe 11s ease-in-out infinite;
 }
 
 .banner.style1.hero.title-card .hero-fiber .r2 {
-	stroke: rgba(92, 196, 184, 0.28);
-	stroke-width: 7;
-	animation: hero-ribbon-hue 18s ease-in-out infinite;
-	animation-delay: -6s;
+	stroke: rgba(74, 232, 240, 0.16);
+	stroke-width: 5;
+	animation: hero-fiber-breathe 11s ease-in-out infinite;
+	animation-delay: -4s;
 }
 
 .banner.style1.hero.title-card .hero-fiber .r-spark {
-	stroke: rgba(255, 255, 255, 0.38);
-	stroke-width: 1.25;
+	stroke: rgba(242, 255, 255, 0.28);
+	stroke-width: 1.1;
 	stroke-dasharray: 3 28 1 42 2 36;
 	animation: hero-sparkle 18s linear infinite;
 }
 
 .banner.style1.hero.title-card .hero-fiber .r-floor {
-	stroke: rgba(92, 196, 184, 0.22);
-	stroke-width: 10;
-	animation: hero-ribbon-hue 18s ease-in-out infinite;
-	animation-delay: -3s;
+	stroke: rgba(74, 232, 240, 0.12);
+	stroke-width: 8;
 }
 
 .banner.style1.hero.title-card .hero-fiber .ribbons {
 	transform-box: fill-box;
 	transform-origin: center;
-	animation: hero-ribbon-sweep 18s ease-in-out infinite;
+	animation: hero-ribbon-sweep 22s ease-in-out infinite;
 }
 
 .banner.style1.hero.title-card .hero-fiber .ribbon-floor {
-	opacity: 0.45;
-	filter: blur(3px);
+	opacity: 0.38;
+	filter: blur(2px);
 }
 
-@keyframes hero-ribbon-hue {
-	0%, 100% { stroke: rgba(72, 186, 168, 0.4); }
-	33% { stroke: rgba(176, 88, 176, 0.42); }
-	66% { stroke: rgba(224, 132, 124, 0.4); }
+@keyframes hero-fiber-breathe {
+	0%, 100% { stroke: rgba(74, 232, 240, 0.18); }
+	50% { stroke: rgba(74, 232, 240, 0.34); }
 }
 
 @keyframes hero-ribbon-sweep {
-	0%, 100% { transform: translateX(-3.5%); }
-	50% { transform: translateX(3.5%); }
+	0%, 100% { transform: translateX(-2.4%); }
+	50% { transform: translateX(2.4%); }
 }
 
 @keyframes hero-sparkle {
 	to { stroke-dashoffset: -160; }
+}
+
+@keyframes rack-light-pulse {
+	0%, 100% { opacity: 0.22; }
+	50% { opacity: 0.52; }
 }
 
 .banner.style1.hero.title-card .content,
@@ -279,33 +284,34 @@ body.is-preload .banner.style1.hero.title-card .content {
 	z-index: 4;
 	transform: none;
 	opacity: 1;
-	background: transparent;
+	background: radial-gradient(ellipse 22rem 8.2rem at 50% 48%, rgba(11, 15, 20, 0.78) 0%, rgba(11, 15, 20, 0.38) 48%, transparent 74%);
 }
 
 .banner.style1.hero.title-card .content p.major {
 	margin-left: auto;
 	margin-right: auto;
 	max-width: 28rem;
-	color: rgba(255, 255, 255, 0.94);
+	color: var(--ice);
 }
 
 .banner.style1.hero.title-card .wordmark {
-	color: #fff;
+	color: var(--ice);
 	font-size: clamp(2.2rem, 6.4vw, 4.15rem);
 	letter-spacing: -0.045em;
 	animation: none;
 	text-shadow:
-		0 1px 1px rgba(48, 32, 64, 0.28),
-		0 2px 22px rgba(48, 32, 64, 0.32);
+		0 1px 1px rgba(11, 15, 20, 0.92),
+		0 2px 22px rgba(11, 15, 20, 0.7);
 }
 
 .banner.style1.hero.title-card .lede {
+	color: var(--ice);
 	text-shadow:
-		0 1px 10px rgba(48, 32, 64, 0.34),
-		0 0 24px rgba(48, 32, 64, 0.18);
+		0 1px 12px rgba(11, 15, 20, 0.9),
+		0 0 24px rgba(11, 15, 20, 0.55);
 }
 
-/* Soft step from high-key glass into the ink app rows. */
+/* Soft step from the ink hall into the navy app rows. */
 .banner.style1.hero.title-card::after {
 	content: "";
 	position: absolute;
@@ -604,6 +610,7 @@ button:hover,
 	.banner.style1.hero.title-card.fullscreen .content,
 	body.is-preload .banner.style1.hero.title-card .content {
 		padding: 4.25rem 1.25rem 1.85rem;
+		background: radial-gradient(ellipse 18rem 7.4rem at 50% 48%, rgba(11, 15, 20, 0.84) 0%, rgba(11, 15, 20, 0.42) 50%, transparent 76%);
 	}
 
 	.banner.style1.hero.title-card::after {
@@ -621,12 +628,17 @@ button:hover,
 	.banner.style1.hero.title-card .wordmark {
 		letter-spacing: -0.045em;
 		text-shadow:
-			0 1px 1px rgba(48, 32, 64, 0.28),
-			0 2px 22px rgba(48, 32, 64, 0.32);
+			0 1px 1px rgba(11, 15, 20, 0.92),
+			0 2px 22px rgba(11, 15, 20, 0.7);
 	}
 
 	.banner.style1.hero.title-card .hero-fiber .ribbons,
-	.banner.style1.hero.title-card .hero-fiber .ribbon {
+	.banner.style1.hero.title-card .hero-fiber .ribbon,
+	.banner.style1.hero.title-card .image::after {
 		animation: none;
+	}
+
+	.banner.style1.hero.title-card .image::after {
+		opacity: 0.28;
 	}
 }
