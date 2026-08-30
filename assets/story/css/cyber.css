@@ -56,9 +56,9 @@
 	pointer-events: none;
 	border-radius: 50%;
 	box-shadow:
-		0 0 72px 16px rgba(74, 232, 240, 0.14),
-		inset 0 0 90px rgba(74, 232, 240, 0.08);
-	animation: ambient-glow 9s ease-in-out infinite;
+		0 0 64px 12px rgba(74, 232, 240, 0.08),
+		inset 0 0 80px rgba(74, 232, 240, 0.04);
+	animation: ambient-glow 18s ease-in-out infinite;
 }
 
 @keyframes scan-drift {
@@ -67,8 +67,8 @@
 }
 
 @keyframes ambient-glow {
-	0%, 100% { opacity: 0.55; }
-	50% { opacity: 1; }
+	0%, 100% { opacity: 0.36; }
+	50% { opacity: 0.58; }
 }
 
 /* --- Section-edge hairline packet ------------------------------------- */
@@ -245,14 +245,19 @@
 		stroke-width: 2;
 		stroke-opacity: 0.32;
 	}
+}
 
+@media screen and (max-width: 736px), screen and (max-width: 1280px) and (orientation: portrait) {
 	.banner.style1.fullscreen::after {
-		opacity: 0.4;
+		opacity: 0.22;
 	}
 
-	.banner.style1 .image::after {
-		animation: none;
-		opacity: 0.65;
+	.banner.style1.hero .image::after {
+		animation: ambient-glow 28s ease-in-out infinite;
+		opacity: 0.32;
+		box-shadow:
+			0 0 48px 8px rgba(74, 232, 240, 0.05),
+			inset 0 0 60px rgba(74, 232, 240, 0.03);
 	}
 }
 
@@ -306,6 +311,17 @@
 	}
 
 	.banner.style1.fullscreen::after {
-		opacity: 0.35;
+		opacity: 0.2;
+	}
+
+	.banner.style1.hero .image::after {
+		opacity: 0.28;
+	}
+
+	.banner.style1.hero .wordmark {
+		letter-spacing: -0.03em;
+		text-shadow:
+			0 1px 1px rgba(11, 15, 20, 0.95),
+			0 2px 18px rgba(11, 15, 20, 0.88);
 	}
 }
