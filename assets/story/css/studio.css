@@ -384,6 +384,31 @@ body.is-preload .banner.style1.hero.title-card .content {
 	object-position: top center;
 	background: #000;
 	filter: none;
+	image-rendering: auto;
+}
+
+/* Larger desktop/tablet-landscape frames so 1320px shots are not crushed
+   into Story’s 13rem toy size. Keep the 13 / 23.11111 phone aspect.
+   ≤980px stays on Story’s 11.375rem / 8.125rem so phones stay as they are. */
+@media screen and (min-width: 981px) {
+	.spotlight.style3 .image {
+		width: 18.5rem;
+		height: 32.88888rem;
+	}
+
+	.spotlight.style3 .image img {
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+		-webkit-transform: translateZ(0);
+		transform: translateZ(0);
+	}
+}
+
+@media screen and (min-width: 1681px) {
+	.spotlight.style3 .image {
+		width: 20rem;
+		height: 35.55555rem;
+	}
 }
 
 .spotlight.style3 .image:before,
