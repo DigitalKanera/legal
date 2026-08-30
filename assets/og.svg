@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="DigitalKanera  Apps by Chad Kanera. Buy once. Local-first.">
+  <defs>
+    <radialGradient id="glow" cx="28%" cy="48%" r="58%">
+      <stop offset="0%" stop-color="#163038"/>
+      <stop offset="55%" stop-color="#101820"/>
+      <stop offset="100%" stop-color="#0b0f14"/>
+    </radialGradient>
+    <style>
+      .wordmark {
+        font-family: Syne, Outfit, "Segoe UI", Helvetica, Arial, sans-serif;
+        font-weight: 700;
+        font-size: 68px;
+        letter-spacing: -0.03em;
+        fill: #e8f4f6;
+      }
+      .lede {
+        font-family: Outfit, "Segoe UI", Helvetica, Arial, sans-serif;
+        font-weight: 400;
+        font-size: 26px;
+        fill: #9bb4bb;
+      }
+    </style>
+  </defs>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <line x1="280" y1="70" x2="280" y2="560" stroke="#4ae8f0" stroke-opacity="0.18" stroke-width="1"/>
+  <circle cx="280" cy="315" r="118" fill="none" stroke="#4ae8f0" stroke-opacity="0.38" stroke-width="1"/>
+  <circle cx="280" cy="315" r="118" fill="none" stroke="#4ae8f0" stroke-width="1.5"/>
+  <circle cx="280" cy="315" r="5.5" fill="#d4a05a"/>
+  <text class="wordmark" x="460" y="300">DigitalKanera</text>
+  <text class="lede" x="460" y="354">Apps by Chad Kanera. Buy once. Local-first.</text>
+  <rect x="460" y="384" width="420" height="1" fill="#4ae8f0" fill-opacity="0.42"/>
+  <rect x="460" y="384" width="36" height="1" fill="#d4a05a" fill-opacity="0.9"/>
+</svg>

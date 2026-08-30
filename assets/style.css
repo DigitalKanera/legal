@@ -1,23 +1,25 @@
-:root {
-  color-scheme: light dark;
-  --bg: #f5f7fb;
-  --surface: #ffffff;
-  --text: #1a1f2e;
-  --muted: #5c6478;
-  --accent: #2563eb;
-  --border: #e2e8f0;
-  --max: 720px;
-}
+/*
+	DigitalKanera legal / support documents.
+	Same studio palette as the homepage: ink, navy, cyan fiber, gold links.
+	Quiet chrome only — no scanlines or packets over policy text.
+*/
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #0b0f17;
-    --surface: #121826;
-    --text: #eef2ff;
-    --muted: #9aa3b8;
-    --accent: #60a5fa;
-    --border: #243044;
-  }
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap");
+
+:root {
+  color-scheme: dark;
+  --ink: #0b0f14;
+  --navy: #111820;
+  --panel: #141c26;
+  --ice: #e8f4f6;
+  --cream-dim: #9bb4bb;
+  --muted: #6d7e86;
+  --fiber: #4ae8f0;
+  --fiber-core: #f2ffff;
+  --gold: #d4a05a;
+  --line: rgba(74, 232, 240, 0.14);
+  --line-strong: rgba(74, 232, 240, 0.32);
+  --max: 720px;
 }
 
 * {
@@ -27,13 +29,20 @@
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  line-height: 1.6;
-  background: var(--bg);
-  color: var(--text);
+  line-height: 1.65;
+  background: var(--ink);
+  color: var(--cream-dim);
 }
 
 a {
-  color: var(--accent);
+  color: var(--gold);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+a:hover {
+  color: var(--ice);
+  border-bottom-color: var(--line-strong);
 }
 
 header,
@@ -45,13 +54,48 @@ footer {
 }
 
 header {
+  position: relative;
   padding-top: 2.5rem;
-  padding-bottom: 1rem;
+  padding-bottom: 1.35rem;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  left: 1.25rem;
+  right: 1.25rem;
+  bottom: 0;
+  height: 1px;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(74, 232, 240, 0) 18%,
+    rgba(74, 232, 240, 0.4) 46%,
+    var(--fiber-core) 50%,
+    rgba(74, 232, 240, 0.4) 54%,
+    rgba(74, 232, 240, 0) 82%,
+    transparent 100%
+  );
+  background-size: 38% 100%;
+  background-repeat: no-repeat;
+  background-position: -38% 0;
+  animation: header-packet 16s linear infinite;
+}
+
+@keyframes header-packet {
+  to {
+    background-position: 138% 0;
+  }
 }
 
 header h1 {
   margin: 0 0 0.25rem;
+  font-family: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
   font-size: 1.75rem;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  color: var(--ice);
 }
 
 header p {
@@ -64,16 +108,23 @@ main {
 }
 
 .card {
-  background: var(--surface);
-  border: 1px solid var(--border);
+  background: var(--navy);
+  border: 1px solid var(--line);
   border-radius: 12px;
   padding: 1.25rem 1.5rem;
   margin: 1rem 0 1.5rem;
+  box-shadow:
+    0 0 0 1px rgba(74, 232, 240, 0.03),
+    0 0 28px rgba(74, 232, 240, 0.04);
 }
 
 .card h2 {
   margin-top: 0;
+  font-family: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
   font-size: 1.125rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--ice);
 }
 
 .card ul {
@@ -89,7 +140,7 @@ main {
 
 .app-list li {
   padding: 0.75rem 0;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--line);
 }
 
 .app-list li:last-child {
@@ -102,7 +153,7 @@ main {
 }
 
 .app-list a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .app-list span {
@@ -127,21 +178,33 @@ main {
 
 article h2 {
   margin-top: 2rem;
+  font-family: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
   font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--ice);
 }
 
 article h3 {
   margin-top: 1.5rem;
+  font-family: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
   font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--ice);
 }
 
 article p,
 article li {
-  color: var(--text);
+  color: var(--cream-dim);
 }
 
 article ul {
   padding-left: 1.25rem;
+}
+
+article code {
+  font-size: 0.9em;
+  color: var(--ice);
 }
 
 .meta {
@@ -156,7 +219,7 @@ footer {
 }
 
 footer a {
-  color: var(--muted);
+  color: var(--gold);
 }
 
 .legal-line {
@@ -172,15 +235,30 @@ footer a {
   display: inline-block;
   margin-top: 0.5rem;
   padding: 0.65rem 1rem;
-  background: var(--accent);
-  color: #fff !important;
+  background: transparent;
+  color: var(--ice) !important;
+  border: 1px solid var(--line-strong);
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
 }
 
-@media (prefers-color-scheme: dark) {
-  .button-link {
-    color: #0b0f17 !important;
+.button-link:hover {
+  background: var(--fiber);
+  color: var(--ink) !important;
+  border-color: var(--fiber);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  header::after {
+    animation: none;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(74, 232, 240, 0.28),
+      transparent
+    );
+    background-size: 100% 100%;
+    background-position: 0 0;
   }
 }
