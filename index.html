@@ -33,13 +33,35 @@
 
 		<div id="wrapper" class="divided">
 
-			<section class="banner style1 orient-left content-align-left image-position-center fullscreen hero">
+			<section class="banner style1 content-align-center image-position-center fullscreen hero title-card">
 				<div class="content">
 					<h1 class="wordmark">DigitalKanera</h1>
 					<p class="major lede">Apps by Chad Kanera. Buy once. Local-first. No account required for the core thing.</p>
 				</div>
 				<div class="image">
-					<img src="assets/story/marks/banner.svg" alt="" />
+					<img src="assets/story/marks/hero-glass.jpg" width="1400" height="1400" alt="" />
+					<svg class="hero-fiber" viewBox="0 0 1200 800" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+						<defs>
+							<linearGradient id="hero-fiber-fade" x1="0" y1="0" x2="1" y2="0">
+								<stop offset="0%" stop-color="white" stop-opacity="0" />
+								<stop offset="16%" stop-color="white" stop-opacity="0.35" />
+								<stop offset="50%" stop-color="white" stop-opacity="1" />
+								<stop offset="84%" stop-color="white" stop-opacity="0.35" />
+								<stop offset="100%" stop-color="white" stop-opacity="0" />
+							</linearGradient>
+							<mask id="hero-fiber-mask">
+								<rect width="1200" height="800" fill="url(#hero-fiber-fade)" />
+							</mask>
+						</defs>
+						<g class="ribbons" mask="url(#hero-fiber-mask)">
+							<path class="ribbon r1" d="M-80 392 C 160 248, 360 536, 560 392 S 960 248, 1280 404" />
+							<path class="ribbon r2" d="M-80 428 C 200 568, 400 272, 620 424 S 1000 572, 1280 388" />
+							<path class="ribbon r-spark" d="M-80 408 C 180 300, 380 500, 590 408 S 980 300, 1280 396" />
+						</g>
+						<g class="ribbon-floor" mask="url(#hero-fiber-mask)">
+							<path class="ribbon r-floor" d="M-80 728 C 200 688, 400 768, 620 728 S 1000 688, 1280 736" />
+						</g>
+					</svg>
 				</div>
 			</section>
 
