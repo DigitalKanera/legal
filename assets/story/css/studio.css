@@ -486,7 +486,7 @@ button:hover,
 		z-index: 4;
 		transform: none;
 		opacity: 1;
-		background: radial-gradient(ellipse 21rem 7rem at 50% 47%, rgba(11, 15, 20, 0.58) 0%, rgba(11, 15, 20, 0.18) 58%, transparent 78%);
+		background: radial-gradient(ellipse 20rem 6.2rem at 50% 47%, rgba(11, 15, 20, 0.46) 0%, rgba(11, 15, 20, 0.1) 58%, transparent 78%);
 	}
 
 	.banner.style1.hero .content p.major {
