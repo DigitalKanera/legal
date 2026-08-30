@@ -1,0 +1,288 @@
+/*
+	DigitalKanera studio restyle — sits on Story (HTML5 UP).
+	Overrides the default pastel / Source Sans / stock-photo look.
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap");
+
+:root {
+	--ink: #0b0f14;
+	--navy: #111820;
+	--panel: #161d27;
+	--panel-2: #1c2430;
+	--cream: #f3ece0;
+	--cream-dim: #c9c0b0;
+	--muted: #8d8578;
+	--amber: #d4a05a;
+	--amber-deep: #c4924a;
+	--line: rgba(243, 236, 224, 0.12);
+	--line-strong: rgba(212, 160, 90, 0.35);
+}
+
+html {
+	color-scheme: dark;
+}
+
+body {
+	background: var(--ink);
+	color: var(--cream-dim);
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, Helvetica, Arial, sans-serif;
+	font-weight: 400;
+	letter-spacing: 0;
+	line-height: 1.6;
+}
+
+body, input, select, textarea {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, Helvetica, Arial, sans-serif;
+	font-weight: 400;
+	color: var(--cream-dim);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Newsreader", "Iowan Old Style", "Palatino Linotype", Palatino, serif;
+	font-weight: 500;
+	letter-spacing: -0.02em;
+	color: var(--cream);
+	line-height: 1.15;
+}
+
+h1 {
+	font-size: 3.15rem;
+	margin-bottom: 1.1rem;
+}
+
+h2 {
+	font-size: 2.05rem;
+}
+
+p {
+	margin: 0 0 1.35rem 0;
+}
+
+p.major {
+	font-size: 1.15rem;
+	color: var(--cream-dim);
+	max-width: 28rem;
+}
+
+a {
+	color: var(--amber);
+	text-decoration: none;
+	border-bottom: 1px solid transparent;
+}
+
+a:hover {
+	color: var(--cream);
+	text-decoration: none;
+	border-bottom-color: var(--line-strong);
+}
+
+strong, b {
+	font-weight: 600;
+	color: var(--cream);
+}
+
+#wrapper {
+	background: var(--ink);
+}
+
+#wrapper.divided > * {
+	box-shadow: inset 0 1px 0 var(--line);
+}
+
+#wrapper.divided > *:first-child {
+	box-shadow: none;
+}
+
+.banner,
+.spotlight,
+.wrapper,
+footer.wrapper {
+	background-color: var(--ink);
+	color: var(--cream-dim);
+}
+
+.banner.style1.fullscreen {
+	min-height: 88vh;
+	background:
+		radial-gradient(ellipse at 18% 20%, rgba(212, 160, 90, 0.08), transparent 42%),
+		linear-gradient(180deg, #10151c 0%, var(--ink) 100%);
+}
+
+.banner .content,
+.spotlight .content {
+	max-width: 36rem;
+}
+
+.banner.style1 .content {
+	width: 54%;
+}
+
+.eyebrow {
+	display: inline-block;
+	margin: 0 0 0.85rem 0;
+	padding: 0.2rem 0.65rem;
+	border: 1px solid var(--line-strong);
+	border-radius: 999px;
+	color: var(--amber);
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+	font-size: 0.7rem;
+	font-weight: 600;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+}
+
+.wordmark {
+	margin-bottom: 0.35rem;
+}
+
+.lede {
+	margin-bottom: 0;
+}
+
+.spotlight.style1 {
+	background: var(--navy);
+}
+
+.spotlight.style1.alt {
+	background: var(--panel);
+}
+
+.spotlight.style1 .image {
+	background-color: var(--panel-2);
+}
+
+.spotlight.style1 .image img,
+.banner.style1 .image img {
+	background: transparent;
+}
+
+@media screen and (max-width: 736px) and (orientation: portrait) {
+	.banner.style1 .image,
+	.spotlight.style1 .image {
+		min-height: 16rem;
+	}
+
+	.banner.style1 .image img,
+	.spotlight.style1 .image img {
+		position: absolute;
+		height: 16rem;
+	}
+}
+
+.links {
+	list-style: none;
+	margin: 1.5rem 0 0 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.85rem 1.25rem;
+}
+
+.links li {
+	padding: 0;
+	list-style: none;
+}
+
+.links a {
+	font-size: 0.95rem;
+	font-weight: 500;
+	color: var(--cream);
+	border-bottom: 1px solid var(--line-strong);
+}
+
+.links a:hover {
+	color: var(--amber);
+}
+
+.wrapper.attention {
+	background: var(--ink);
+	text-align: left;
+}
+
+.wrapper.attention .inner {
+	max-width: 38rem;
+	margin: 0 auto;
+	text-align: left;
+}
+
+.wrapper.attention h2 {
+	margin-bottom: 1rem;
+}
+
+.wrapper.attention p {
+	color: var(--cream-dim);
+}
+
+.x-link {
+	display: inline-block;
+	margin-top: 0.25rem;
+	color: var(--amber);
+	font-weight: 500;
+}
+
+footer.site-footer {
+	background: #090c10;
+	color: var(--muted);
+	text-align: left;
+}
+
+footer.site-footer .inner {
+	max-width: 48rem;
+	margin: 0 auto;
+	text-align: left;
+}
+
+footer.site-footer p {
+	margin: 0 0 0.65rem 0;
+	font-size: 0.9rem;
+}
+
+footer.site-footer .credit {
+	margin-top: 1.25rem;
+	font-size: 0.8rem;
+	color: var(--muted);
+}
+
+ul.icons {
+	display: none;
+}
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button,
+.button {
+	background: transparent !important;
+	box-shadow: inset 0 0 0 1px var(--line-strong) !important;
+	color: var(--cream) !important;
+	border-radius: 999px !important;
+	font-family: inherit !important;
+	font-weight: 500 !important;
+	letter-spacing: 0.02em !important;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+button:hover,
+.button:hover {
+	background: var(--amber) !important;
+	box-shadow: inset 0 0 0 1px var(--amber) !important;
+	color: var(--ink) !important;
+}
+
+@media screen and (max-width: 736px) {
+	h1 {
+		font-size: 2.35rem;
+	}
+
+	h2 {
+		font-size: 1.7rem;
+	}
+
+	.wrapper.attention,
+	footer.site-footer {
+		text-align: left;
+	}
+}
