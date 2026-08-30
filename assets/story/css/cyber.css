@@ -22,9 +22,9 @@
 	}
 }
 
-/* --- Banner: ambient glow + faint scan -------------------------------- */
+/* --- Banner: ambient glow + faint scan (split-hero only) -------------- */
 
-.banner.style1.fullscreen::after {
+.banner.style1.fullscreen:not(.title-card)::after {
 	content: "";
 	position: absolute;
 	inset: 0;
@@ -49,7 +49,7 @@
 	position: relative;
 }
 
-.banner.style1 .image::after {
+.banner.style1:not(.title-card) .image::after {
 	content: "";
 	position: absolute;
 	inset: 8%;
@@ -248,11 +248,11 @@
 }
 
 @media screen and (max-width: 736px), screen and (max-width: 1280px) and (orientation: portrait) {
-	.banner.style1.fullscreen::after {
+	.banner.style1.fullscreen:not(.title-card)::after {
 		opacity: 0.22;
 	}
 
-	.banner.style1.hero .image::after {
+	.banner.style1.hero:not(.title-card) .image::after {
 		inset: 15%;
 		border: 44px solid rgba(74, 232, 240, 0.55);
 		border-radius: 50%;
@@ -271,6 +271,8 @@
 	.wordmark,
 	.banner.style1.fullscreen::after,
 	.banner.style1 .image::after,
+	.banner.style1.hero.title-card .hero-fiber .ribbon,
+	.banner.style1.hero.title-card .hero-fiber .ribbons,
 	#wrapper.divided > *:not(:first-child)::after,
 	.fiber-glow,
 	.fiber-core,
@@ -314,18 +316,16 @@
 		background-position: 0 0;
 	}
 
-	.banner.style1.fullscreen::after {
+	.banner.style1.fullscreen:not(.title-card)::after {
 		opacity: 0.2;
 	}
 
-	.banner.style1.hero .image::after {
+	.banner.style1.hero:not(.title-card) .image::after {
 		opacity: 0.28;
 	}
 
-	.banner.style1.hero .wordmark {
-		letter-spacing: -0.03em;
-		text-shadow:
-			0 1px 1px rgba(11, 15, 20, 0.95),
-			0 2px 18px rgba(11, 15, 20, 0.88);
+	.banner.style1.hero.title-card .hero-fiber .r-spark {
+		stroke-dasharray: 2 48;
+		opacity: 0.35;
 	}
 }
