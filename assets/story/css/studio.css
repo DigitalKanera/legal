@@ -124,6 +124,15 @@ footer.wrapper {
 		linear-gradient(180deg, #101820 0%, var(--ink) 100%);
 }
 
+.banner.style1 .image {
+	position: relative;
+}
+
+.banner.style1 .image img {
+	object-fit: contain;
+	object-position: center;
+}
+
 .banner .content,
 .spotlight .content {
 	max-width: 36rem;
@@ -221,12 +230,10 @@ footer.wrapper {
 }
 
 @media screen and (max-width: 736px) and (orientation: portrait) {
-	.banner.style1 .image,
 	.spotlight.style1 .image {
 		min-height: 16rem;
 	}
 
-	.banner.style1 .image img,
 	.spotlight.style1 .image img {
 		position: absolute;
 		height: 16rem;
@@ -400,5 +407,83 @@ button:hover,
 	.wrapper.attention,
 	footer.site-footer {
 		text-align: left;
+	}
+}
+
+/*
+	Hero: desktop keeps the cinematic split with a large ring in its column.
+	On phones (and portrait tablets) overlay the wordmark on the mark and
+	drop the Story fullscreen 50/50 stack so TipForge peeks on first paint.
+*/
+@media screen and (max-width: 736px), screen and (max-width: 1280px) and (orientation: portrait) {
+	.banner.style1.hero,
+	.banner.style1.hero.orient-left,
+	.banner.style1.hero.orient-right {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: minmax(21rem, min(52vh, 100vw));
+		align-items: stretch;
+		justify-content: stretch;
+		min-height: 0;
+		text-align: center;
+	}
+
+	.banner.style1.hero.fullscreen {
+		min-height: 0;
+	}
+
+	.banner.style1.hero .image,
+	.banner.style1.hero.fullscreen .image {
+		grid-area: 1 / 1;
+		width: 100%;
+		max-width: 100%;
+		height: 100%;
+		min-height: 0;
+		z-index: 1;
+	}
+
+	.banner.style1.hero .image img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+		object-position: center;
+	}
+
+	.banner.style1.hero .content,
+	.banner.style1.hero.fullscreen .content,
+	body.is-preload .banner.style1.hero.onload-content-fade-right .content {
+		grid-area: 1 / 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		max-width: 100%;
+		min-height: 0;
+		height: 100%;
+		margin: 0;
+		padding: 4.25rem 1.25rem 1.35rem;
+		text-align: center;
+		z-index: 4;
+		transform: none;
+		opacity: 1;
+	}
+
+	.banner.style1.hero .content p.major {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.banner.style1.hero .lede {
+		text-shadow: 0 0 18px rgba(11, 15, 20, 0.85);
+	}
+}
+
+@media screen and (max-height: 540px) {
+	.banner.style1.hero.fullscreen {
+		min-height: 0;
 	}
 }
