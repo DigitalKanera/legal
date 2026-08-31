@@ -371,18 +371,26 @@ body.is-preload .banner.style1.hero.title-card .content {
 .spotlight.style3 .image {
 	--phone-bezel-t: 2.5rem;
 	--phone-bezel-b: 3rem;
+	--phone-radius: 1rem;
+	--phone-w: 13rem;
+	--phone-screen-h: 23.11111rem;
 	position: relative;
 	overflow: visible;
 	background-color: #000;
-	border-color: rgba(74, 232, 240, 0.28);
+	border-width: 0;
+	border-color: transparent;
 }
 
 .spotlight.style3 .image img {
 	position: relative;
 	z-index: 1;
+	display: block;
+	width: 100%;
+	height: 100%;
 	object-fit: cover;
 	object-position: top center;
 	background: #000;
+	border-radius: 0;
 	filter: none;
 	image-rendering: auto;
 }
@@ -392,6 +400,8 @@ body.is-preload .banner.style1.hero.title-card .content {
    ≤980px stays on Story’s 11.375rem / 8.125rem so phones stay as they are. */
 @media screen and (min-width: 981px) {
 	.spotlight.style3 .image {
+		--phone-w: 18.5rem;
+		--phone-screen-h: 32.88888rem;
 		width: 18.5rem;
 		height: 32.88888rem;
 	}
@@ -406,14 +416,17 @@ body.is-preload .banner.style1.hero.title-card .content {
 
 @media screen and (min-width: 1681px) {
 	.spotlight.style3 .image {
+		--phone-w: 20rem;
+		--phone-screen-h: 35.55555rem;
 		width: 20rem;
 		height: 35.55555rem;
 	}
 }
 
+/* Earpiece / home stay; the SVG fiber is the only cyan outline. */
 .spotlight.style3 .image:before,
 .spotlight.style3 .image:after {
-	border-color: rgba(74, 232, 240, 0.28);
+	border-color: transparent;
 }
 
 .spotlight.style3 .image:before {
@@ -428,6 +441,9 @@ body.is-preload .banner.style1.hero.title-card .content {
 	.spotlight.style3 .image {
 		--phone-bezel-t: 2.1875rem;
 		--phone-bezel-b: 2.625rem;
+		--phone-radius: 0.875rem;
+		--phone-w: 11.375rem;
+		--phone-screen-h: 20.22222rem;
 	}
 }
 
@@ -435,6 +451,9 @@ body.is-preload .banner.style1.hero.title-card .content {
 	.spotlight.style3 .image {
 		--phone-bezel-t: 1.5625rem;
 		--phone-bezel-b: 1.875rem;
+		--phone-radius: 0.625rem;
+		--phone-w: 8.125rem;
+		--phone-screen-h: 14.44444rem;
 	}
 }
 

@@ -112,14 +112,20 @@
 }
 
 /* --- Phone fiber SVG -------------------------------------------------- */
+/*
+	One stroke, same box as the Story bezel (screen + earpiece + home).
+	No fixed 208×458 viewBox: that aspect was the original 13rem frame.
+	Desktop 18.5rem/20rem frames letterboxed it (ghost corners, stray bottom
+	bar) and overflow:visible + non-scaling-stroke left leftover segments.
+*/
 
 .spotlight.style3 .image > svg.fiber {
 	position: absolute;
-	left: -1px;
-	top: calc(-1 * var(--phone-bezel-t, 2.5rem) - 1px);
-	width: calc(100% + 2px);
-	height: calc(100% + var(--phone-bezel-t, 2.5rem) + var(--phone-bezel-b, 3rem) + 2px);
-	overflow: visible;
+	left: 0;
+	top: calc(-1 * var(--phone-bezel-t, 2.5rem));
+	width: 100%;
+	height: calc(100% + var(--phone-bezel-t, 2.5rem) + var(--phone-bezel-b, 3rem));
+	overflow: hidden;
 	pointer-events: none;
 	z-index: 3;
 }
@@ -127,6 +133,8 @@
 .spotlight.style3 .image > svg.fiber rect {
 	fill: none;
 	vector-effect: non-scaling-stroke;
+	rx: var(--phone-radius, 1rem);
+	ry: var(--phone-radius, 1rem);
 }
 
 .fiber-glass {
