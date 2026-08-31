@@ -133,10 +133,6 @@
 .spotlight.style3 .image > svg.fiber rect {
 	fill: none;
 	vector-effect: non-scaling-stroke;
-	x: 0.5px;
-	y: 0.5px;
-	width: calc(100% - 1px);
-	height: calc(100% - 1px);
 	rx: var(--phone-radius, 1rem);
 	ry: var(--phone-radius, 1rem);
 }
