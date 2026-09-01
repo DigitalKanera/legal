@@ -572,6 +572,39 @@ a.store-badge img {
 	font-weight: 500;
 }
 
+.wrapper.x-door {
+	background: var(--ink);
+	text-align: left;
+}
+
+.wrapper.x-door .inner {
+	max-width: 28rem;
+	margin: 0 auto;
+	text-align: left;
+}
+
+.wrapper.x-door .wordmark a {
+	color: var(--ice);
+	border-bottom: none;
+}
+
+.wrapper.x-door .wordmark a:hover {
+	color: var(--ice);
+	border-bottom-color: transparent;
+}
+
+.wrapper.x-door .lede {
+	margin-bottom: 0.85rem;
+}
+
+.wrapper.x-door .handle {
+	margin: 0 0 1.5rem 0;
+	color: var(--ice);
+	font-family: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+	font-weight: 500;
+	letter-spacing: -0.02em;
+}
+
 footer.site-footer {
 	background: #090c10;
 	color: var(--muted);
