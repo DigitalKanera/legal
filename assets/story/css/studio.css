@@ -345,6 +345,38 @@ body.is-preload .banner.style1.hero.title-card .content {
 	margin-bottom: 0.35rem;
 }
 
+.hero-x {
+	margin: 0.15rem 0 0.9rem 0;
+	line-height: 0;
+}
+
+.hero-x a {
+	display: inline-flex;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+	width: 2.15rem;
+	height: 2.15rem;
+	border: 1px solid var(--line-strong);
+	border-radius: 999px;
+	color: var(--fiber);
+	border-bottom: none;
+}
+
+.hero-x a:hover {
+	color: var(--ice);
+	border-color: rgba(74, 232, 240, 0.55);
+	border-bottom: none;
+	background: rgba(74, 232, 240, 0.08);
+}
+
+.hero-x svg {
+	display: block;
+	width: 0.82rem;
+	height: 0.82rem;
+	fill: currentColor;
+}
+
 .lede {
 	margin-bottom: 0;
 }
@@ -377,18 +409,29 @@ body.is-preload .banner.style1.hero.title-card .content {
 	--phone-screen-r: calc(var(--phone-w) * 6.9 / 90);
 	position: relative;
 	overflow: visible;
+	flex: 0 0 var(--phone-w);
+	align-self: center;
+	width: var(--phone-w);
+	min-width: var(--phone-w);
+	max-width: var(--phone-w);
+	height: var(--phone-screen-h);
 	background-color: #000;
 	border-width: 0;
 	border-color: transparent;
 	border-radius: var(--phone-screen-r);
 }
 
+/* Screenshot and fiber share the same padding box. Absolute so Story’s
+   in-flow :before/:after bezels and the 1320px width attr cannot inflate
+   the flex item on a wide window. */
 .spotlight.style3 .image img {
-	position: relative;
+	position: absolute;
+	inset: 0;
 	z-index: 1;
 	display: block;
 	width: 100%;
 	height: 100%;
+	max-width: none;
 	object-fit: cover;
 	object-position: top center;
 	background: #000;
@@ -405,8 +448,6 @@ body.is-preload .banner.style1.hero.title-card .content {
 	.spotlight.style3 .image {
 		--phone-w: 18.5rem;
 		--phone-screen-h: 32.88888rem;
-		width: 18.5rem;
-		height: 32.88888rem;
 	}
 
 	.spotlight.style3 .image img {
@@ -421,8 +462,6 @@ body.is-preload .banner.style1.hero.title-card .content {
 	.spotlight.style3 .image {
 		--phone-w: 20rem;
 		--phone-screen-h: 35.55555rem;
-		width: 20rem;
-		height: 35.55555rem;
 	}
 }
 
