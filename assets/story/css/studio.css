@@ -374,11 +374,13 @@ body.is-preload .banner.style1.hero.title-card .content {
 	--phone-radius: 1rem;
 	--phone-w: 13rem;
 	--phone-screen-h: 23.11111rem;
+	--phone-screen-r: calc(var(--phone-w) * 6.9 / 90);
 	position: relative;
 	overflow: visible;
 	background-color: #000;
 	border-width: 0;
 	border-color: transparent;
+	border-radius: var(--phone-screen-r);
 }
 
 .spotlight.style3 .image img {
@@ -390,7 +392,8 @@ body.is-preload .banner.style1.hero.title-card .content {
 	object-fit: cover;
 	object-position: top center;
 	background: #000;
-	border-radius: 0;
+	/* Same corner as svg.fiber rx 6.9 on a 90×160 viewBox. */
+	border-radius: var(--phone-screen-r);
 	filter: none;
 	image-rendering: auto;
 }
@@ -603,6 +606,18 @@ a.store-badge img {
 	font-family: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
 	font-weight: 500;
 	letter-spacing: -0.02em;
+}
+
+
+.wrapper.x-feed {
+	background: var(--ink);
+	padding-top: 0;
+}
+
+.wrapper.x-feed .inner {
+	max-width: 42rem;
+	margin: 0 auto;
+	min-height: 80vh;
 }
 
 footer.site-footer {
