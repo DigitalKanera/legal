@@ -405,16 +405,18 @@ body.is-preload .banner.style1.hero.title-card .content {
 	--phone-bezel-b: 3rem;
 	--phone-radius: 1rem;
 	--phone-w: 13rem;
-	--phone-screen-h: 23.11111rem;
+	/* True iPhone still aspect (1320×2868), not Story’s 9:16. */
+	--phone-screen-h: calc(var(--phone-w) * 2868 / 1320);
 	--phone-screen-r: calc(var(--phone-w) * 6.9 / 90);
 	position: relative;
 	overflow: visible;
-	flex: 0 0 var(--phone-w);
+	/* flex-basis on column = height; keep grow/shrink 0, size via width+aspect. */
+	flex: 0 0 auto;
 	align-self: center;
-	width: var(--phone-w);
-	min-width: var(--phone-w);
-	max-width: var(--phone-w);
-	height: var(--phone-screen-h);
+	width: min(var(--phone-w), 100%);
+	max-width: 100%;
+	aspect-ratio: 1320 / 2868;
+	height: auto;
 	background-color: #000;
 	border-width: 0;
 	border-color: transparent;
@@ -442,12 +444,11 @@ body.is-preload .banner.style1.hero.title-card .content {
 }
 
 /* Larger desktop/tablet-landscape frames so 1320px shots are not crushed
-   into Story’s 13rem toy size. Keep the 13 / 23.11111 phone aspect.
+   into Story’s 13rem toy size. Height follows aspect-ratio from --phone-w.
    ≤980px stays on Story’s 11.375rem / 8.125rem so phones stay as they are. */
 @media screen and (min-width: 981px) {
 	.spotlight.style3 .image {
 		--phone-w: 18.5rem;
-		--phone-screen-h: 32.88888rem;
 	}
 
 	.spotlight.style3 .image img {
@@ -461,7 +462,6 @@ body.is-preload .banner.style1.hero.title-card .content {
 @media screen and (min-width: 1681px) {
 	.spotlight.style3 .image {
 		--phone-w: 20rem;
-		--phone-screen-h: 35.55555rem;
 	}
 }
 
@@ -485,7 +485,6 @@ body.is-preload .banner.style1.hero.title-card .content {
 		--phone-bezel-b: 2.625rem;
 		--phone-radius: 0.875rem;
 		--phone-w: 11.375rem;
-		--phone-screen-h: 20.22222rem;
 	}
 }
 
@@ -495,7 +494,6 @@ body.is-preload .banner.style1.hero.title-card .content {
 		--phone-bezel-b: 1.875rem;
 		--phone-radius: 0.625rem;
 		--phone-w: 8.125rem;
-		--phone-screen-h: 14.44444rem;
 	}
 }
 
@@ -938,12 +936,14 @@ footer.site-footer .trust-line {
 
 .tip-step-grid .step-phone {
 	--phone-w: 11.5rem;
-	--phone-screen-h: calc(var(--phone-w) * 160 / 90);
+	--phone-screen-h: calc(var(--phone-w) * 2868 / 1320);
 	--phone-screen-r: calc(var(--phone-w) * 6.9 / 90);
 	position: relative;
 	display: block;
-	width: var(--phone-w);
-	height: var(--phone-screen-h);
+	width: min(var(--phone-w), 100%);
+	max-width: 100%;
+	aspect-ratio: 1320 / 2868;
+	height: auto;
 	margin: 0 auto 0.95rem;
 	background-color: #000;
 	border-radius: var(--phone-screen-r);
@@ -1069,5 +1069,11 @@ footer.site-footer .trust-line {
 
 	.spotlight.product-hero .content h1 {
 		font-size: 2rem;
+	}
+}
+
+@media screen and (max-width: 736px) {
+	.tip-step-grid .step-phone {
+		--phone-w: 9rem;
 	}
 }
