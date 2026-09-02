@@ -903,16 +903,24 @@ footer.site-footer .trust-line {
 	user-select: none;
 }
 
-/* Product three-step strip — phones must stay centered on mobile */
+/* Product three-step strip — phones must stay centered on mobile.
+   Story sets .wrapper.style1 > .inner { width: 64rem; max-width: 100% }.
+   The phone strip's min-content width inflates the section, so 100% becomes
+   ~64rem and a "centered" grid paints off-screen to the right under
+   #wrapper { overflow-x: hidden }. Pin inner to the viewport. */
 .wrapper.tip-steps {
 	background: var(--navy);
 	overflow-x: clip;
+	max-width: 100%;
 }
 
-.wrapper.tip-steps .inner {
-	max-width: 64rem;
-	margin: 0 auto;
+.wrapper.tip-steps > .inner {
+	width: 100% !important;
+	max-width: 100% !important;
+	margin-left: auto;
+	margin-right: auto;
 	overflow-x: clip;
+	box-sizing: border-box;
 }
 
 .wrapper.tip-steps h2 {
@@ -933,6 +941,7 @@ footer.site-footer .trust-line {
 	padding: 0;
 	width: 100%;
 	max-width: 100%;
+	min-width: 0;
 	box-sizing: border-box;
 }
 
@@ -1028,6 +1037,16 @@ footer.site-footer .trust-line {
 	font-weight: 650;
 	letter-spacing: 0.08em;
 	text-transform: uppercase;
+}
+
+/* Keep product page Story inners on the viewport (same 64rem trap). */
+.wrapper.product-top > .inner,
+.wrapper.product-facts > .inner,
+.wrapper.product-trust > .inner,
+.wrapper.tip-steps > .inner {
+	width: 100% !important;
+	max-width: 100% !important;
+	box-sizing: border-box;
 }
 
 /* Bullets + trust */
