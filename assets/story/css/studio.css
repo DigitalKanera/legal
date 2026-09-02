@@ -773,3 +773,301 @@ button:hover,
 		opacity: 0.28;
 	}
 }
+
+
+/* product pages + homepage CTAs */
+
+.store-cta-stack {
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 0.85rem;
+	min-height: 0;
+}
+
+a.store-price {
+	display: inline-block;
+	color: var(--ice);
+	font-family: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+	font-size: 1.05rem;
+	font-weight: 600;
+	letter-spacing: -0.01em;
+	border-bottom: 1px solid var(--line-strong);
+	line-height: 1.35;
+}
+
+a.store-price:hover {
+	color: var(--fiber);
+	border-bottom-color: var(--fiber);
+}
+
+.wrapper.buy-once {
+	background: var(--navy);
+	padding-top: 2.25rem;
+	padding-bottom: 2.25rem;
+}
+
+.wrapper.buy-once .inner {
+	max-width: 38rem;
+	margin: 0 auto;
+}
+
+.wrapper.buy-once .buy-once-lede {
+	margin: 0 0 0.45rem 0;
+	color: var(--ice);
+	font-size: 1.05rem;
+}
+
+.wrapper.buy-once .buy-once-refuse {
+	margin: 0;
+	color: var(--muted);
+	font-size: 0.95rem;
+}
+
+footer.site-footer .trust-line {
+	color: var(--ice-dim);
+	font-weight: 500;
+}
+
+/* Thin product top bar */
+.wrapper.product-top {
+	background: var(--ink);
+	padding-top: 1.35rem;
+	padding-bottom: 0.85rem;
+}
+
+.wrapper.product-top .inner {
+	max-width: 48rem;
+	margin: 0 auto;
+}
+
+.product-crumb {
+	margin: 0;
+	font-size: 0.92rem;
+	color: var(--muted);
+}
+
+.product-crumb a {
+	color: var(--ice);
+	border-bottom: 1px solid transparent;
+}
+
+.product-crumb a:hover {
+	color: var(--gold);
+	border-bottom-color: var(--line-strong);
+}
+
+.product-crumb .sep {
+	margin: 0 0.45rem;
+	color: var(--muted);
+	opacity: 0.7;
+}
+
+/* Product hero reuses spotlight.iphone */
+.spotlight.product-hero .content h1 {
+	font-size: 2.35rem;
+	margin-bottom: 0.85rem;
+}
+
+.spotlight.product-hero .pitch {
+	margin-bottom: 1.35rem;
+	color: var(--ice-dim);
+	font-size: 1.08rem;
+	max-width: 28rem;
+}
+
+.store-status {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.65rem 0.85rem;
+	margin: 0 0 1.35rem 0;
+}
+
+.review-pill {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	min-height: 40px;
+	padding: 0 1rem;
+	border: 1px solid rgba(212, 160, 90, 0.4);
+	border-radius: 8px;
+	background: transparent;
+	color: var(--gold);
+	font-family: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+	font-size: 0.7rem;
+	font-weight: 650;
+	letter-spacing: 0.06em;
+	line-height: 1;
+	white-space: nowrap;
+	text-transform: uppercase;
+	pointer-events: none;
+	user-select: none;
+}
+
+/* TipForge three-step strip */
+.wrapper.tip-steps {
+	background: var(--navy);
+}
+
+.wrapper.tip-steps .inner {
+	max-width: 64rem;
+	margin: 0 auto;
+}
+
+.wrapper.tip-steps h2 {
+	margin-bottom: 1.5rem;
+	font-size: 1.55rem;
+}
+
+.tip-step-grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 1.75rem 1.25rem;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.tip-step-grid li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.tip-step-grid .step-phone {
+	--phone-w: 11.5rem;
+	--phone-screen-h: calc(var(--phone-w) * 160 / 90);
+	--phone-screen-r: calc(var(--phone-w) * 6.9 / 90);
+	position: relative;
+	display: block;
+	width: var(--phone-w);
+	height: var(--phone-screen-h);
+	margin: 0 auto 0.95rem;
+	background-color: #000;
+	border-radius: var(--phone-screen-r);
+	overflow: visible;
+}
+
+.tip-step-grid .step-phone img {
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+	display: block;
+	width: 100%;
+	height: 100%;
+	max-width: none;
+	object-fit: cover;
+	object-position: top center;
+	background: #000;
+	border-radius: var(--phone-screen-r);
+}
+
+.tip-step-grid .step-phone > svg.fiber {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	max-width: none;
+	overflow: visible;
+	pointer-events: none;
+	z-index: 3;
+}
+
+.tip-step-grid .step-phone > svg.fiber rect {
+	fill: none;
+	vector-effect: non-scaling-stroke;
+}
+
+.tip-step-grid li:nth-child(1) .fiber-glow,
+.tip-step-grid li:nth-child(1) .fiber-core {
+	animation-duration: 7.2s;
+}
+
+.tip-step-grid li:nth-child(2) .fiber-glow,
+.tip-step-grid li:nth-child(2) .fiber-core {
+	animation-duration: 8.5s;
+	animation-delay: -3.1s;
+}
+
+.tip-step-grid li:nth-child(3) .fiber-glow,
+.tip-step-grid li:nth-child(3) .fiber-core {
+	animation-duration: 6.7s;
+	animation-delay: -5.4s;
+}
+
+.tip-step-grid .step-cap {
+	margin: 0;
+	color: var(--ice);
+	font-family: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+	font-size: 0.98rem;
+	font-weight: 500;
+}
+
+.tip-step-grid .step-num {
+	display: block;
+	margin-bottom: 0.2rem;
+	color: var(--muted);
+	font-size: 0.72rem;
+	font-weight: 650;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+/* Bullets + trust */
+.wrapper.product-facts,
+.wrapper.product-trust {
+	background: var(--ink);
+}
+
+.wrapper.product-facts .inner,
+.wrapper.product-trust .inner {
+	max-width: 38rem;
+	margin: 0 auto;
+}
+
+.wrapper.product-facts h2,
+.wrapper.product-trust h2 {
+	margin-bottom: 1rem;
+	font-size: 1.55rem;
+}
+
+.product-bullets {
+	margin: 0;
+	padding: 0 0 0 1.15rem;
+	color: var(--ice-dim);
+}
+
+.product-bullets li {
+	margin: 0 0 0.75rem 0;
+	padding-left: 0.15rem;
+}
+
+.product-bullets li:last-child {
+	margin-bottom: 0;
+}
+
+.wrapper.product-trust .trust-line {
+	margin: 0 0 1rem 0;
+	color: var(--ice);
+	font-size: 1.05rem;
+	font-weight: 500;
+}
+
+.wrapper.product-trust .links {
+	margin-top: 0.25rem;
+}
+
+@media screen and (max-width: 980px) {
+	.tip-step-grid {
+		grid-template-columns: 1fr;
+		gap: 1.5rem;
+		max-width: 14rem;
+		margin: 0 auto;
+	}
+
+	.spotlight.product-hero .content h1 {
+		font-size: 2rem;
+	}
+}
