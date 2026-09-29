@@ -1133,3 +1133,18 @@ footer.site-footer .trust-line {
 		--phone-w: min(10.5rem, 70vw);
 	}
 }
+
+
+/* Homepage under-card 3-shot strips */
+.home-tip-steps {
+	padding-top: 0.5rem;
+	padding-bottom: 2.5rem;
+}
+.home-tip-heading {
+	font-size: 1.05rem !important;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	opacity: 0.72;
+	margin-bottom: 1.1rem !important;
+	text-align: center !important;
+}
