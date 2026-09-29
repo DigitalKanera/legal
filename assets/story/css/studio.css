@@ -1208,7 +1208,7 @@ footer.site-footer .trust-line {
 	fill: none;
 	vector-effect: non-scaling-stroke;
 }
-@media screen and (min-width: 981px) and (min-height: 700px) {
+@media screen and (min-width: 1100px) and (min-height: 750px) {
 	.spotlight.style3.iphone.home-app {
 		flex-wrap: nowrap;
 	}
@@ -1245,47 +1245,48 @@ footer.site-footer .trust-line {
 
 /* Compact / phone: always stack triple above copy (covers landscape + short heights).
    Desktop side-by-side only when BOTH wide and tall enough. */
-@media screen and (max-width: 980px), screen and (max-height: 700px) {
-	.spotlight.style3.iphone.home-app {
-		-webkit-flex-direction: column !important;
-		-ms-flex-direction: column !important;
-		flex-direction: column !important;
-		-webkit-flex-wrap: nowrap !important;
-		-ms-flex-wrap: nowrap !important;
-		flex-wrap: nowrap !important;
-		-webkit-align-items: center !important;
-		-ms-align-items: center !important;
-		align-items: center !important;
-		-webkit-justify-content: flex-start !important;
-		justify-content: flex-start !important;
+@media screen and (max-width: 1099px), screen and (max-height: 749px) {
+	.spotlight.style3.iphone.home-app,
+	.spotlight.style3.iphone.home-app.orient-left,
+	.spotlight.style3.iphone.home-app.orient-right {
+		display: block !important;
 		text-align: center !important;
 		padding-left: 1.25rem;
 		padding-right: 1.25rem;
+		overflow-x: hidden;
 	}
 	.spotlight.style3.iphone.home-app > .content {
-		-webkit-flex: 0 0 auto !important;
-		-ms-flex: 0 0 auto !important;
-		flex: 0 0 auto !important;
+		display: block !important;
 		width: 100% !important;
 		max-width: 36rem !important;
-		margin: 0 !important;
+		margin: 0 auto !important;
 		text-align: center !important;
+		float: none !important;
 	}
 	.spotlight.style3.iphone.home-app > .home-triple {
-		-webkit-order: -1 !important;
-		-ms-flex-order: -1 !important;
-		order: -1 !important;
-		-webkit-flex: 0 0 auto !important;
-		-ms-flex: 0 0 auto !important;
-		flex: 0 0 auto !important;
+		display: block !important;
 		width: 100% !important;
-		max-width: 40rem !important;
-		margin: 0 0 1rem 0 !important;
+		max-width: min(40rem, 96vw) !important;
+		margin: 0 auto 1rem auto !important;
+		float: none !important;
 	}
 	.spotlight.style3.iphone .home-triple-row {
-		max-width: min(40rem, 94vw);
+		display: flex !important;
+		flex-direction: row !important;
+		flex-wrap: nowrap !important;
+		justify-content: center;
+		max-width: min(40rem, 96vw);
 		gap: 1rem;
 		padding: 0;
+		margin: 0 auto;
+	}
+	.spotlight.style3.iphone .home-triple-phone {
+		flex: 0 1 auto;
+		min-width: 0;
+		height: min(48vh, 14rem);
+		max-height: min(48vh, 14rem);
+		width: calc(min(48vh, 14rem) * 1320 / 2868);
+		aspect-ratio: 1320 / 2868;
 	}
 }
 
