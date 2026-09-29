@@ -1135,16 +1135,59 @@ footer.site-footer .trust-line {
 }
 
 
-/* Homepage under-card 3-shot strips */
-.home-tip-steps {
-	padding-top: 0.5rem;
-	padding-bottom: 2.5rem;
+
+
+/* Homepage: 3 phones in place of the main spotlight shot */
+.spotlight.iphone .image.home-triple {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1.25rem 0.75rem;
 }
-.home-tip-heading {
-	font-size: 1.05rem !important;
-	letter-spacing: 0.04em;
-	text-transform: uppercase;
-	opacity: 0.72;
-	margin-bottom: 1.1rem !important;
-	text-align: center !important;
+.spotlight.iphone .image.home-triple img {
+	position: relative !important;
+	width: 100%;
+	height: auto !important;
+	max-height: none !important;
+	object-fit: cover;
+	aspect-ratio: 1320 / 2868;
+	border-radius: calc(6.9 / 90 * 100%);
+}
+.home-triple-row {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: flex-end;
+	justify-content: center;
+	gap: 0.55rem;
+	width: 100%;
+	max-width: 24rem;
+}
+.home-triple-phone {
+	position: relative;
+	flex: 1 1 0;
+	min-width: 0;
+	max-width: 7.75rem;
+}
+.home-triple-phone > svg.fiber {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: 3;
+	overflow: visible;
+}
+.home-triple-phone > svg.fiber rect {
+	fill: none;
+	vector-effect: non-scaling-stroke;
+}
+@media screen and (max-width: 736px) {
+	.home-triple-row {
+		gap: 0.4rem;
+		max-width: 100%;
+	}
+	.home-triple-phone {
+		max-width: none;
+	}
 }
