@@ -1143,6 +1143,13 @@ footer.site-footer .trust-line {
 /* Homepage horizontal triple — NOT .image, so Story phone-frame CSS cannot crush it */
 .spotlight.style3.iphone.home-app {
 	flex-wrap: wrap;
+	align-items: center;
+}
+.spotlight.style3.iphone.home-app > .content {
+	flex: 1 1 18rem;
+	min-width: 0;
+	max-width: 100%;
+	box-sizing: border-box;
 }
 .spotlight.style3.iphone .home-triple {
 	order: -1;
@@ -1234,62 +1241,70 @@ footer.site-footer .trust-line {
 	}
 }
 
-/* Phone / short landscape: stack triple + copy; never cram side-by-side */
-@media screen and (orientation: landscape) and (max-width: 980px) {
+
+
+/* Compact / phone: always stack triple above copy (covers landscape + short heights).
+   Desktop side-by-side only when BOTH wide and tall enough. */
+@media screen and (max-width: 980px), screen and (max-height: 700px) {
 	.spotlight.style3.iphone.home-app {
+		-webkit-flex-direction: column !important;
+		-ms-flex-direction: column !important;
 		flex-direction: column !important;
-		flex-wrap: nowrap;
-		align-items: center;
-		justify-content: flex-start;
+		-webkit-flex-wrap: nowrap !important;
+		-ms-flex-wrap: nowrap !important;
+		flex-wrap: nowrap !important;
+		-webkit-align-items: center !important;
+		-ms-align-items: center !important;
+		align-items: center !important;
+		-webkit-justify-content: flex-start !important;
+		justify-content: flex-start !important;
 		text-align: center !important;
 		padding-left: 1.25rem;
 		padding-right: 1.25rem;
 	}
-	.spotlight.style3.iphone.home-app .content {
-		width: 100%;
-		max-width: 36rem;
-		text-align: center;
+	.spotlight.style3.iphone.home-app > .content {
+		-webkit-flex: 0 0 auto !important;
+		-ms-flex: 0 0 auto !important;
+		flex: 0 0 auto !important;
+		width: 100% !important;
+		max-width: 36rem !important;
+		margin: 0 !important;
+		text-align: center !important;
 	}
-	.spotlight.style3.iphone .home-triple {
-		order: -1;
-		flex: 0 0 auto;
-		width: 100%;
-		max-width: 40rem;
-		margin: 0 0 1rem 0;
-	}
-	.spotlight.style3.iphone.orient-right .home-triple,
-	.spotlight.style3.iphone.orient-left .home-triple {
-		margin: 0 0 1rem 0;
+	.spotlight.style3.iphone.home-app > .home-triple {
+		-webkit-order: -1 !important;
+		-ms-flex-order: -1 !important;
+		order: -1 !important;
+		-webkit-flex: 0 0 auto !important;
+		-ms-flex: 0 0 auto !important;
+		flex: 0 0 auto !important;
+		width: 100% !important;
+		max-width: 40rem !important;
+		margin: 0 0 1rem 0 !important;
 	}
 	.spotlight.style3.iphone .home-triple-row {
 		max-width: min(40rem, 94vw);
 		gap: 1rem;
 		padding: 0;
 	}
-	.spotlight.style3.iphone .home-triple-phone {
-		flex: 0 1 auto;
-		width: auto;
-		height: min(52vh, 13.5rem);
-		max-height: min(52vh, 13.5rem);
-		aspect-ratio: 1320 / 2868;
-		/* width from height × aspect */
-		width: calc(min(52vh, 13.5rem) * 1320 / 2868);
-		min-width: 0;
-	}
 }
 
-/* Very short landscape (phones on their side): tighter phones, keep gaps */
-@media screen and (orientation: landscape) and (max-height: 430px) {
+/* Short landscape: shrink phones to fit height, keep readable gaps */
+@media screen and (max-height: 500px) {
 	.spotlight.style3.iphone .home-triple-phone {
-		height: min(58vh, 11.5rem);
-		max-height: min(58vh, 11.5rem);
-		width: calc(min(58vh, 11.5rem) * 1320 / 2868);
+		flex: 0 1 auto;
+		min-width: 0;
+		height: min(58vh, 12rem);
+		max-height: min(58vh, 12rem);
+		width: calc(min(58vh, 12rem) * 1320 / 2868);
+		aspect-ratio: 1320 / 2868;
 	}
 	.spotlight.style3.iphone .home-triple-row {
 		gap: 0.85rem;
+		max-width: min(40rem, 96vw);
 	}
 	.spotlight.style3.iphone.home-app {
-		padding-top: 1.25rem;
+		padding-top: 1rem;
 		padding-bottom: 0.75rem;
 	}
 }
