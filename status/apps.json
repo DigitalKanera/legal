@@ -1,0 +1,12 @@
+{
+  "updated": "2026-10-21T17:18:00-04:00",
+  "apps": [
+    { "name": "DoseCaddy",       "version": "1.0 (9)",  "status": "In review",            "since": "Oct 12", "color": "orange" },
+    { "name": "Lodestone",       "version": "1.0 (39)", "status": "Ready, waiting on go", "since": "Oct 3",  "color": "blue" },
+    { "name": "ChoreBox",        "version": "1.0.1",    "status": "Live",                 "since": "Oct 11", "color": "green" },
+    { "name": "Compass Effect",  "version": "1.1",      "status": "Live",                 "since": "Oct 10", "color": "green" },
+    { "name": "TipForge",        "version": "1.0.1",    "status": "Live",                 "since": "Jul 3",  "color": "green" },
+    { "name": "Nightly Minutes", "version": "1.1",      "status": "Live",                 "since": "Sep 16", "color": "green" },
+    { "name": "SlipBin",         "version": "—",        "status": "On hold",              "since": "",       "color": "gray" }
+  ]
+}
