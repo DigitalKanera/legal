@@ -1,0 +1,26 @@
+{
+  "updated": "2026-10-21T21:10:00-04:00",
+  "board": "https://cursor.com/canvas/store-27d89410-2136-44f4-af10-a611c9ff2b46/94a2e4c8-3353-4f17-93dc-1e612002f6db",
+  "counts": { "Brainstorm": 4, "Pitched": 3, "In progress": 1, "Shipped": 1, "Parked": 2 },
+  "waitingOnYou": [
+    { "id": "checks-and-balances", "text": "Checks & Balances — your voiceover MP3" },
+    { "id": "primer-drills", "text": "Primer Drills — your go to draft 3 scripts" },
+    { "id": "assistant-first-apps", "text": "Assistant-first apps — your go to start setup" },
+    { "id": "family-sharing-iap", "text": "Family Sharing for IAPs — needs your go" },
+    { "id": "iap-checklist-tests", "text": "IAP checklist tests — your yes" },
+    { "id": "bills-dashboard", "text": "Bills dashboard Page — your yes" }
+  ],
+  "ideas": [
+    { "id": "checks-and-balances", "name": "Checks & Balances L1–4", "stage": "In progress", "area": "Content", "owner": "Faceless Desk", "next": "Your voiceover MP3" },
+    { "id": "primer-drills", "name": "Primer Drills videos", "stage": "Pitched", "area": "Content", "owner": "Faceless Desk", "next": "Your go to draft the first three scripts" },
+    { "id": "assistant-first-apps", "name": "Assistant-first apps", "stage": "Pitched", "area": "Apps", "owner": "Studio / iOS Builder", "next": "Your go for iOS Builder to start shared setup and Lodestone intents (build only)" },
+    { "id": "iap-checklist-tests", "name": "IAP checklist auto-tests", "stage": "Pitched", "area": "Apps", "owner": "iOS Builder", "next": "Your yes" },
+    { "id": "katana-edits", "name": "Katana launch edits", "stage": "Brainstorm", "area": "Content", "owner": "Grok Bot", "next": "Test edit with a cost shown before rendering; DoseCaddy launch video on approval" },
+    { "id": "family-sharing-iap", "name": "Family Sharing for IAPs", "stage": "Brainstorm", "area": "Apps", "owner": "iOS Builder", "next": "Quick win from Studio's plan; needs your go" },
+    { "id": "bills-dashboard", "name": "Bills dashboard Page", "stage": "Brainstorm", "area": "Tools", "owner": "Grok Bot", "next": "Your yes" },
+    { "id": "super-plan-usage", "name": "Super plan usage Page", "stage": "Brainstorm", "area": "Tools", "owner": "Grok Bot", "next": "Needs a Cursor sign-in on my computer first" },
+    { "id": "app-store-tracker", "name": "App Store tracker + widget", "stage": "Shipped", "area": "Tools", "owner": "Grok Bot / Site", "next": "Daily refresh around 8 AM ET" },
+    { "id": "mascot-demos", "name": "Faceless mascot demos", "stage": "Parked", "area": "Content", "owner": "Faceless Desk", "next": "One proof after a credit quote, only if Primer Drills works" },
+    { "id": "chorebox-icloud", "name": "ChoreBox iCloud sync", "stage": "Parked", "area": "Apps", "owner": "Studio", "next": "Later, after the intents work" }
+  ]
+}
