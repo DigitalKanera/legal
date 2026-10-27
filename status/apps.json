@@ -5,17 +5,53 @@
   ],
   "deadlines": [],
   "apps": [
-    { "name": "DoseCaddy",        "version": "1.0 (9)",   "status": "In review",            "since": "Oct 12", "sinceDate": "2026-10-12", "color": "orange" },
-    { "name": "Lodestone",        "version": "1.0 (39)",  "status": "Ready, waiting on go", "since": "Oct 3",  "sinceDate": "2026-10-03", "color": "blue" },
-    { "name": "TipForge",         "version": "1.0.2 (30)", "status": "Live",                "since": "Oct 26", "sinceDate": "2026-10-26", "color": "green" },
-    { "name": "ChoreBox",         "version": "1.0.2 (15)", "status": "Live",                "since": "Oct 26", "sinceDate": "2026-10-26", "color": "green" },
-    { "name": "Compass Effect",   "version": "1.1 (8)",   "status": "Live",                 "since": "Oct 10", "sinceDate": "2026-10-10", "color": "green" },
-    { "name": "Nightly Minutes",  "version": "1.1 (8)",   "status": "Live",                 "since": "Sep 16", "sinceDate": "2026-09-16", "color": "green" },
-    { "name": "Resonance Break",  "version": "—", "status": "Not submitted", "since": "", "color": "gray" },
-    { "name": "BeckysJobs",       "version": "—", "status": "Not submitted", "since": "", "color": "gray" },
-    { "name": "Nikki's Jobs",     "version": "—", "status": "Not submitted", "since": "", "color": "gray" },
-    { "name": "Reply Boost X",    "version": "—", "status": "Not submitted", "since": "", "color": "gray" },
-    { "name": "Magical R's with Uma", "version": "—", "status": "Not submitted", "since": "", "color": "gray" },
-    { "name": "CyberRunner",      "version": "—", "status": "Not submitted", "since": "", "color": "gray" }
+    {
+      "name": "DoseCaddy",
+      "version": "1.0 (9)",
+      "status": "In review",
+      "since": "Oct 12",
+      "sinceDate": "2026-10-12",
+      "color": "orange"
+    },
+    {
+      "name": "Lodestone",
+      "version": "1.0 (39)",
+      "status": "Ready, waiting on go",
+      "since": "Oct 3",
+      "sinceDate": "2026-10-03",
+      "color": "blue"
+    },
+    {
+      "name": "TipForge",
+      "version": "1.0.2 (30)",
+      "status": "Live",
+      "since": "Oct 26",
+      "sinceDate": "2026-10-26",
+      "color": "green"
+    },
+    {
+      "name": "ChoreBox",
+      "version": "1.0.2 (15)",
+      "status": "Live",
+      "since": "Oct 26",
+      "sinceDate": "2026-10-26",
+      "color": "green"
+    },
+    {
+      "name": "Compass Effect",
+      "version": "1.1 (8)",
+      "status": "Live",
+      "since": "Oct 10",
+      "sinceDate": "2026-10-10",
+      "color": "green"
+    },
+    {
+      "name": "Nightly Minutes",
+      "version": "1.1 (8)",
+      "status": "Live",
+      "since": "Sep 16",
+      "sinceDate": "2026-09-16",
+      "color": "green"
+    }
   ]
 }
