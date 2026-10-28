@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-27T08:10:00-04:00",
+  "updated": "2026-10-28T08:12:00-04:00",
   "needsYou": [
     "Lodestone 1.0 (39) ready — waiting on your go"
   ],
@@ -8,10 +8,10 @@
     {
       "name": "DoseCaddy",
       "version": "1.0 (9)",
-      "status": "In review",
-      "since": "Oct 12",
-      "sinceDate": "2026-10-12",
-      "color": "orange"
+      "status": "Live",
+      "since": "Oct 27",
+      "sinceDate": "2026-10-27",
+      "color": "green"
     },
     {
       "name": "Lodestone",
