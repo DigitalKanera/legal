@@ -1,8 +1,6 @@
 {
-  "updated": "2026-10-28T08:12:00-04:00",
-  "needsYou": [
-    "Lodestone 1.0 (39) ready — waiting on your go"
-  ],
+  "updated": "2026-10-30T08:05:00-04:00",
+  "needsYou": [],
   "deadlines": [],
   "apps": [
     {
@@ -15,10 +13,10 @@
     },
     {
       "name": "Lodestone",
-      "version": "1.0 (39)",
-      "status": "Ready, waiting on go",
-      "since": "Oct 3",
-      "sinceDate": "2026-10-03",
+      "version": "1.0 (42)",
+      "status": "Waiting for Review",
+      "since": "Oct 29",
+      "sinceDate": "2026-10-29",
       "color": "blue"
     },
     {
