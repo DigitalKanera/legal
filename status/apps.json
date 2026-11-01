@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-30T08:05:00-04:00",
+  "updated": "2026-11-01T08:08:00-05:00",
   "needsYou": [],
   "deadlines": [],
   "apps": [
@@ -14,10 +14,10 @@
     {
       "name": "Lodestone",
       "version": "1.0 (42)",
-      "status": "Waiting for Review",
-      "since": "Oct 29",
-      "sinceDate": "2026-10-29",
-      "color": "blue"
+      "status": "Info Requested",
+      "since": "Oct 31",
+      "sinceDate": "2026-10-31",
+      "color": "orange"
     },
     {
       "name": "TipForge",
