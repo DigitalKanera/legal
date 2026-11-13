@@ -1,6 +1,8 @@
 {
-  "updated": "2026-11-01T08:08:00-05:00",
-  "needsYou": [],
+  "updated": "2026-11-13T08:25:00-05:00",
+  "needsYou": [
+    "Accept the updated Apple agreement in App Store Connect."
+  ],
   "deadlines": [],
   "apps": [
     {
